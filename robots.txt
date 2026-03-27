@@ -1,0 +1,16 @@
+# robots.txt for Elite Events Website
+# https://www.eliteevents.com
+
+# Allow all search engines to crawl the entire website
+User-agent: *
+Allow: /
+
+# Block crawling of CSS and JS folders (optional - saves crawl budget)
+# Disallow: /css/
+# Disallow: /js/
+
+# Block crawling of images folder (search engines can still index images via HTML)
+# Disallow: /images/
+
+# Sitemap location
+Sitemap: https://www.eliteevents.com/sitemap.xml
