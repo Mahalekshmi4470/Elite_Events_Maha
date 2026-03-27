@@ -1,12 +1,7 @@
 /*
  * schema.js — Structured Data (Schema Markup) for Elite Events
  * Include this file in every HTML page via:
- *   <script src="js/schema.js"></script>
- *
- * This injects JSON-LD for:
- *  1. Organization
- *  2. FAQ Page (only on faq.html)
- *  3. Services (LocalBusiness)
+ *    <script src="js/schema.js"></script>
  */
 
 // ─── 1. ORGANIZATION SCHEMA (All Pages) ────────────────────────────────────
@@ -14,9 +9,9 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Elite Events",
-  "url": "https://www.eliteevents.com",
-  "logo": "https://www.eliteevents.com/images/logo1.png",
-  "description": "Elite Events is a premium event management company in Chennai offering wedding planning, corporate events, and birthday party services with elegance and perfection.",
+  "url": "https://elite-events-maha.vercel.app",
+  "logo": "https://elite-events-maha.vercel.app/images/logo1.png",
+  "description": "Elite Events is a premium event management company in Chennai offering wedding planning, corporate events, and birthday party services.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Tech Park Tower, OMR Road, Perungudi",
@@ -30,11 +25,7 @@ const organizationSchema = {
     "telephone": "+91-90806-68496",
     "contactType": "customer service",
     "availableLanguage": ["English", "Tamil"]
-  },
-  "sameAs": [
-    "https://www.instagram.com/eliteevents",
-    "https://www.facebook.com/eliteevents"
-  ]
+  }
 };
 
 injectSchema(organizationSchema);
@@ -44,8 +35,8 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EventPlanningService",
   "name": "Elite Events",
-  "image": "https://www.eliteevents.com/images/logo1.png",
-  "url": "https://www.eliteevents.com",
+  "image": "https://elite-events-maha.vercel.app/images/logo1.png",
+  "url": "https://elite-events-maha.vercel.app",
   "telephone": "+91-90806-68496",
   "email": "info@eliteevents.com",
   "priceRange": "₹₹₹",
@@ -62,12 +53,6 @@ const localBusinessSchema = {
     "latitude": "12.9628",
     "longitude": "80.2436"
   },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-    "opens": "09:00",
-    "closes": "18:00"
-  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Event Management Services",
@@ -77,8 +62,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Wedding Event Planning",
-          "description": "Complete wedding planning services in Chennai including venue selection, decoration, catering, and photography.",
-          "url": "https://www.eliteevents.com/wedding.html"
+          "url": "https://elite-events-maha.vercel.app/wedding.html"
         }
       },
       {
@@ -86,8 +70,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Corporate Event Management",
-          "description": "Professional corporate event management including conferences, product launches, team building events, and galas in Chennai.",
-          "url": "https://www.eliteevents.com/corporate.html"
+          "url": "https://elite-events-maha.vercel.app/corporate.html"
         }
       },
       {
@@ -95,8 +78,7 @@ const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Birthday Party Planning",
-          "description": "Creative birthday party planning for kids and adults including themes, decorations, cake, and entertainment in Chennai.",
-          "url": "https://www.eliteevents.com/birthday.html"
+          "url": "https://elite-events-maha.vercel.app/birthday.html"
         }
       }
     ]
@@ -124,39 +106,7 @@ if (window.location.pathname.includes("faq.html")) {
         "name": "Does Elite Events manage destination weddings?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we handle destination weddings across cities and international locations. Our team coordinates all logistics for you."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How early should we plan a corporate event?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Plan 2–6 months in advance for large corporate events. Smaller events or meetings can often be arranged on shorter notice."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does Elite Events handle international corporate events?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we organize conferences, product launches, and exhibitions both within India and worldwide."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How early should I book a birthday party with Elite Events?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Booking 2–4 weeks in advance is ideal for proper planning and to secure your preferred theme and venue."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you provide custom themes and entertainment for birthday parties?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes! We offer custom themes, cakes, DJs, games, and full entertainment packages for birthday parties of all sizes."
+          "text": "Yes, we handle destination weddings across cities and international locations."
         }
       }
     ]

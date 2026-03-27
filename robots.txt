@@ -1,16 +1,12 @@
 # robots.txt for Elite Events Website
-# https://www.eliteevents.com
+# Live URL: https://elite-events-maha.vercel.app/
 
-# Allow all search engines to crawl the entire website
 User-agent: *
 Allow: /
 
-# Block crawling of CSS and JS folders (optional - saves crawl budget)
-# Disallow: /css/
-# Disallow: /js/
+# Block search engines from indexing the assets directly (Optional)
+Disallow: /css/
+Disallow: /js/
 
-# Block crawling of images folder (search engines can still index images via HTML)
-# Disallow: /images/
-
-# Sitemap location
-Sitemap: https://www.eliteevents.com/sitemap.xml
+# Sitemap location - This tells Google where your map is
+Sitemap: https://elite-events-maha.vercel.app/sitemap.xml
